@@ -1,0 +1,62 @@
+
+<!--
+  Catalog Home: structure-only HTML
+  Styling lives in `css/catalogHome.css`
+  Behavior lives in `js/catalogHome.js`
+  Mockup reference: assets/mockups/catalog-home.png
+-->
+
+<section class="amx-home" aria-label="Amerimax digital catalog home">
+  <!-- Background shapes (purely decorative; CSS positions and sizes them) -->
+  <div class="amx-home__bg" aria-hidden="true">
+    <div class="amx-shape amx-shape--topLeft"></div>
+    <div class="amx-shape amx-shape--centerPanel"></div>
+    <div class="amx-shape amx-shape--bottomRight"></div>
+  </div>
+
+  <!-- Foreground content (real readable content) -->
+  <div class="amx-home__content">
+    <header class="amx-home__header">
+      <h1 class="main-title">Amerimax Digital Catalog</h1>
+    </header>
+
+    <div class="amx-home__subtitle">
+      <h3 class="main-subtitle">Click Category to Begin Search</h3>
+    </div>
+
+    <nav class="amx-home__categories" aria-label="Catalog categories">
+      <a class="amx-circleBtn" href="/catalog-parts">
+        <span class="amx-circleBtn__label">Parts</span>
+      </a>
+      <a class="amx-circleBtn" href="/catalog-materials">
+        <span class="amx-circleBtn__label">Materials</span>
+      </a>
+    </nav>
+
+    <!-- Contact form (bottom-right panel in mockup) -->
+    <aside class="amx-home__request">
+      <div class="custom-contact-form">
+        <h2>Need to request?</h2>
+
+        <form action="#" method="POST">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="form-btn">Submit</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+</section>
