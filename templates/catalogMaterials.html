@@ -1,0 +1,113 @@
+<!--
+  Catalog Materials: structure-only HTML
+  Styling lives in `css/catalogMaterials.css`
+  Behavior lives in `js/catalogMaterials.js`
+  Visual reference: assets/mockups/catalog-parts&materials.png (not the homepage layout)
+-->
+
+<section class="amx-catalogStage amx-catalogStage--materials" aria-label="Amerimax catalog (Materials)">
+  <!-- Single centered wave (same file as --amx-center-wave-url in Custom CSS). -->
+  <div class="amx-catalogStage__bg" aria-hidden="true">
+    <img
+      class="amx-catalogWave amx-catalogWave--center"
+      src="https://static1.squarespace.com/static/69d3ab0044c65537361c0c53/t/69dd38760acf6041e6a61500/1776105591149/amerimax-footer-shape.webp"
+      width="1100"
+      height="640"
+      alt=""
+      decoding="async"
+    />
+  </div>
+
+  <div class="amx-catalog amx-catalog--materials">
+    <header class="amx-catalog__header">
+      <h1 class="amx-catalog__title">Explore Our Catalog</h1>
+      <p class="amx-catalog__scope">Materials</p>
+    </header>
+
+    <div class="amx-catalog__panel" aria-label="Catalog panel">
+      <div class="amx-catalog__filters" aria-label="Filters">
+        <div class="amx-filter">
+          <label class="amx-filter__label" for="amx-material">Material</label>
+          <select id="amx-material" class="amx-filter__control">
+            <option value="">Select a material…</option>
+          </select>
+        </div>
+
+        <button type="button" class="amx-filter__reset" id="amx-reset" disabled>Reset</button>
+      </div>
+
+      <div class="amx-catalog__body">
+        <aside class="amx-catalog__note" aria-label="Notes">
+          <h2 class="amx-note__title">Notes</h2>
+          <p class="amx-note__line"><strong>Color:</strong> Available in any color.</p>
+          <p class="amx-note__line">Common stocked colors will display when available.</p>
+          <p class="amx-note__line">Select a material to see details.</p>
+        </aside>
+
+        <main class="amx-catalog__main" aria-label="Catalog content">
+          <section class="amx-view amx-view--browse" id="amx-browse" aria-label="Browse all materials">
+            <h2 class="amx-view__title">Browse</h2>
+            <div class="amx-list" id="amx-list" aria-live="polite">
+              <!-- JS populates -->
+            </div>
+          </section>
+
+          <section class="amx-view amx-view--detail" id="amx-detail" aria-label="Material details" hidden>
+            <div class="amx-card">
+              <div class="amx-card__top">
+                <h2 class="amx-card__title" id="amx-detail-title">Material</h2>
+                <p class="amx-card__subtitle" id="amx-detail-subtitle">Select filters to refine variants.</p>
+              </div>
+
+              <div class="amx-card__grid">
+                <div class="amx-diagram" aria-label="Diagram placeholder">
+                  <div class="amx-diagram__frame">
+                    <span class="amx-diagram__text">Diagram coming soon</span>
+                  </div>
+                </div>
+
+                <div class="amx-specs" aria-label="Key specs">
+                  <div class="amx-spec">
+                    <div class="amx-spec__label">Material</div>
+                    <div class="amx-spec__value" id="amx-spec-material">—</div>
+                  </div>
+                  <div class="amx-spec">
+                    <div class="amx-spec__label">Thickness</div>
+                    <div class="amx-spec__value" id="amx-spec-thickness">—</div>
+                  </div>
+                  <div class="amx-spec">
+                    <div class="amx-spec__label">Max Length</div>
+                    <div class="amx-spec__value" id="amx-spec-maxlength">—</div>
+                  </div>
+                  <div class="amx-spec">
+                    <div class="amx-spec__label">Common Colors</div>
+                    <div class="amx-spec__value" id="amx-spec-colors">—</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="amx-db" aria-label="Variant list">
+                <h3 class="amx-db__title">Variants</h3>
+                <div class="amx-db__empty" id="amx-db-empty">Select a material to load variants.</div>
+                <div class="amx-db__tableWrap" id="amx-db-tableWrap" hidden>
+                  <table class="amx-db__table">
+                    <thead>
+                      <tr>
+                        <th>Thickness</th>
+                        <th>Color</th>
+                        <th>Max Length</th>
+                      </tr>
+                    </thead>
+                    <tbody id="amx-db-body">
+                      <!-- JS populates -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</section>

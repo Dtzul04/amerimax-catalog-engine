@@ -1,4 +1,5 @@
 /* Added to Custom CSS to minimize header and bottom padding */
+
 .header, #header { display: none !important; }
 .header-announcement-bar-wrapper { padding: 0 !important; }
 #siteWrapper { padding-top: 0 !important; }
@@ -9,6 +10,99 @@
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+
+/* ===== Homepage contact form (scoped) ===== */
+body#collection-69d6477863c6f94b0746b748 #block-yui_3_17_2_1_1776255493101_1502 .sqs-site-style-form,
+body#collection-69d6477863c6f94b0746b748 #block-yui_3_17_2_1_1776255493101_1502 .form-wrapper{
+  background: transparent !important;
+}
+
+body#collection-69d6477863c6f94b0746b748 #block-yui_3_17_2_1_1776255493101_1502 .form-wrapper{
+  --form-block-padding: 0 !important;
+  padding: 0 !important;
+}
+
+/* Hide the auto "Name" group title */
+body#collection-69d6477863c6f94b0746b748
+#block-yui_3_17_2_1_1776255493101_1502 fieldset.name > legend .title{
+  display: none !important;
+}
+
+/* Add custom form heading */
+body#collection-69d6477863c6f94b0746b748
+#block-yui_3_17_2_1_1776255493101_1502 .form-wrapper::before{
+  content: "Contact Us";
+  display: block;
+  margin-bottom: 16px;
+  text-align: center;
+  font-family: var(--amx-font-display) !important;
+  font-weight: 700;
+  font-size: 28px;
+  color: #fff;
+}
+
+/* Labels + legends */
+body#collection-69d6477863c6f94b0746b748 #block-yui_3_17_2_1_1776255493101_1502 label,
+body#collection-69d6477863c6f94b0746b748 #block-yui_3_17_2_1_1776255493101_1502 legend,
+body#collection-69d6477863c6f94b0746b748 #block-yui_3_17_2_1_1776255493101_1502 .title{
+  color: #fff !important;
+  font-family: var(--amx-font-body) !important;
+  font-weight: 700 !important;
+}
+
+/* First/Last name captions + (required) text */
+body#collection-69d6477863c6f94b0746b748
+#block-yui_3_17_2_1_1776255493101_1502 .caption-text,
+body#collection-69d6477863c6f94b0746b748
+#block-yui_3_17_2_1_1776255493101_1502 .description.required{
+  color: #fff !important;
+}
+
+/* Inputs + textarea */
+body#collection-69d6477863c6f94b0746b748 #block-yui_3_17_2_1_1776255493101_1502 input,
+body#collection-69d6477863c6f94b0746b748 #block-yui_3_17_2_1_1776255493101_1502 textarea{
+  width: 100% !important;
+  padding: 6px 10px !important;
+  border-radius: 4px !important;
+  border: 1px solid #ccc !important;
+  background: #fff !important;
+  color: #000 !important;
+  font-family: var(--amx-font-body) !important;
+  box-sizing: border-box !important;
+}
+
+/* Submit button */
+body#collection-69d6477863c6f94b0746b748 #block-yui_3_17_2_1_1776255493101_1502 .form-submit-button{
+  width: 100% !important;
+  background: transparent !important;
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+/* Make wrapper a positioning context */
+body#collection-69d6477863c6f94b0746b748
+#block-yui_3_17_2_1_1776255493101_1502 .form-wrapper{
+  position: relative !important;
+  padding-top: 44px !important; /* creates space for the heading */
+}
+
+/* Pin the heading to the top of the wrapper */
+body#collection-69d6477863c6f94b0746b748
+#block-yui_3_17_2_1_1776255493101_1502 .form-wrapper::before{
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 !important;
+  pointer-events: none;
+}
+
+body#collection-69d6477863c6f94b0746b748 #block-yui_3_17_2_1_1776255493101_1502 .form-submit-button:hover{
+  background: #fff !important;
+  color: #000 !important;
+}
+
 
 /* Catalog Home */
 
@@ -90,7 +184,7 @@
 .amx-shape--bottomRight{
   right: 0;
   bottom: 70px;
-  width: 40%;
+  width: 37%;
   height: 30%;
   background: var(--amx-green-900);
 }
